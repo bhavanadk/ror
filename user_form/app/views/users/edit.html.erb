@@ -1,0 +1,30 @@
+<fieldset>
+    <legend>Edit user information:</legend>
+
+<%= form_for :user, url: user_edit_path(@user), method: :put do |f| %>
+	<p>	
+		<%= f.label :firstname %><br>
+		<%=f.text_field :firstname %>
+	</p>
+
+	<p>
+		<%= f.label :lastname %><br>
+		<%=f.text_field :lastname %>
+	</p>
+
+	<p>
+		<%= f.label :email %><br>
+		<%=f.text_field :email%>
+	</p>
+
+	<p>
+		<%= f.label :password %><br>
+		<%=f.password_field :password%>
+	</p>
+
+
+	<p>
+		<%= f.submit%>
+	</p>	
+	</fieldset>
+<% end %>
