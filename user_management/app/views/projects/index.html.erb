@@ -1,0 +1,41 @@
+<h1>project details</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+<table>
+	<tr>
+		<th>name</th>
+		<th>duration</th>
+		<th>teamsize</th>
+        <th>cost</th>
+        <th>domain</th>
+</tr>
+
+
+<% @users.each do |project| %>
+<tr>		
+<td><%= project.name %></td>
+<td><%= project.duration %></td>
+<td><%= project.teamsize %></td>
+<td><%= project.cost %></td>
+<td><%= project.domain %></td>
+
+</tr>
+<% end %>
+</table>
